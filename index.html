@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가까운 병원 찾기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 가까운 병원 찾기</h1>
+            <p class="subtitle">보훈복지공단 위탁병원 현황</p>
+        </header>
+
+        <div class="controls">
+            <button id="myLocationBtn" class="btn-primary">📍 내 위치에서 병원 찾기</button>
+            <div class="filter-group">
+                <label for="hospitalType">병원 종류:</label>
+                <select id="hospitalType">
+                    <option value="all">전체</option>
+                    <option value="종합병원">종합병원</option>
+                    <option value="병원">병원</option>
+                    <option value="의원">의원</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="hospitalList" class="hospital-list">
+            <h3>병원 목록</h3>
+            <div id="listContent"></div>
+        </div>
+
+        <div id="infoPanel" class="info-panel hidden">
+            <button id="closeInfo" class="close-btn">&times;</button>
+            <div id="infoPanelContent"></div>
+        </div>
+    </div>
+
+    <script src="hospitalData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
